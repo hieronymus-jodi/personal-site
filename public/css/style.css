@@ -1,15 +1,31 @@
 /* style.css - Contains site-wide styles */
 
 :root {
+  --lightest-teal: #D9F8F1;
   --main-teal: #7EDDE0;
   --dark-teal: #00747F;
+  --darkest-teal: #003D3D;
   font-size: 16px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#banner{
+  display:inline-block;
+  *display:inline;
+  background-color: var(--lightest-teal);
+  width: 100%;
+  min-height: 6rem;
+}
+
+#banner-content h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--darkest-teal);
+}
+
 .navbar {
   list-style-type: none;
-  margin: 0;
+  margin: 0.25rem 0 0 0;
   padding: 0;
   overflow: hidden;
   background-color: var(--main-teal);

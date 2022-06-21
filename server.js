@@ -24,8 +24,8 @@ app.use('', function(req,res){
     res.sendFile(path.join(__dirname + '/pages/homepage.html'))
 })
 
-app.use('/about', function(req,res){
-    res.sendFile(path.join(__dirname + '/pages/about.html'))
+app.use('/about-me', function(req,res){
+    res.sendFile(path.join(__dirname + '/pages/about-me.html'))
 })
 
 app.use(express.static("source"))
