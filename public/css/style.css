@@ -1,0 +1,33 @@
+/* style.css - Contains site-wide styles */
+
+:root {
+  --main-teal: #7EDDE0;
+  --dark-teal: #00747F;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--main-teal);
+}
+
+.navbar-item {
+  float: left;
+}
+
+.navbar-item a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 1rem 1rem;
+  text-decoration: none;
+}
+
+.navbar-item a:hover {
+  background-color: var(--dark-teal);
+  color: white;
+}
