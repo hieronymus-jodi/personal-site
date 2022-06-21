@@ -1,0 +1,24 @@
+{
+  "name": "personal-site",
+  "version": "1.0.0",
+  "description": "Jodi Hieronymus's personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hieronymus-jodi/personal-site.git"
+  },
+  "keywords": [
+    "jodi",
+    "hieronymus",
+    "personal"
+  ],
+  "author": "Jodi Hieronymus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hieronymus-jodi/personal-site/issues"
+  },
+  "homepage": "https://github.com/hieronymus-jodi/personal-site#readme"
+}
