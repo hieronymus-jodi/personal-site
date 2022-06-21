@@ -4,21 +4,23 @@
   "description": "Jodi Hieronymus's personal website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon ./index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hieronymus-jodi/personal-site.git"
   },
-  "keywords": [
-    "jodi",
-    "hieronymus",
-    "personal"
-  ],
+  "keywords": [],
   "author": "Jodi Hieronymus",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/hieronymus-jodi/personal-site/issues"
   },
-  "homepage": "https://github.com/hieronymus-jodi/personal-site#readme"
+  "homepage": "https://github.com/hieronymus-jodi/personal-site#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
