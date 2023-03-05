@@ -1,14 +1,18 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import '../../index.css';
+import { KeyboardOnlyLink } from "../A11y";
 
-import { MobileNav } from "../NavBar";
+import { NavBar } from "../NavBar";
 
 function PageBase() {
     return (
       <div>
-        <MobileNav />
-        <Outlet />
+        <KeyboardOnlyLink href="#main">Skip to Content</KeyboardOnlyLink>
+        <NavBar />
+        <div id="main">
+          <Outlet />
+        </div>
       </div>
     );
   }
