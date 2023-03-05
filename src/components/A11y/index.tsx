@@ -1,1 +1,1 @@
-export { KeyboardOnlyLink } from './KeyboardOnlyLink';
+export * from './VisuallyHidden';

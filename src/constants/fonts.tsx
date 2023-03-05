@@ -1,3 +1,3 @@
 export const FONT = {
-    Script: 'Lemon, Snell Roundhand, cursive'
-}
+  Script: 'Lemon, Snell Roundhand, cursive',
+};
