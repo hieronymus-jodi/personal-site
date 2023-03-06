@@ -89,8 +89,9 @@ const ArrowWrapper = styled.div`
   }
 `;
 
-function GetIcon(icon: string, windowSize: React.MutableRefObject<number>) {
-  const baseSize = Number(windowSize) < Number(SCREEN_WIDTH.Desktop) ? 1 : 1.5;
+function GetIcon(icon: string, windowSize: number) {
+  const DesktopWidthNum = Number(SCREEN_WIDTH.Desktop.substring(0, SCREEN_WIDTH.Desktop.length - 2)); // Removes 'px' at the end
+  let baseSize = windowSize < DesktopWidthNum ? 1 : 1.5;
   switch (icon) {
     case 'magnifying-glass':
       return (
@@ -122,7 +123,7 @@ function ArrowLinkCard({
   return (
     <LinksCardWrapper href={href}>
       <LinksCardContent>
-        <DecorativeIcon>{GetIcon(icon, windowSize)}</DecorativeIcon>
+        <DecorativeIcon>{GetIcon(icon, windowSize.current)}</DecorativeIcon>
         <div>
           <H2>{heading}</H2>
           <P>{description}</P>
