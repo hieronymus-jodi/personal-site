@@ -1,16 +1,31 @@
 import React from 'react';
 import styled from 'styled-components';
 import { GiKiwiBird } from 'react-icons/gi';
-import { COLOR, GRADIENT } from '../../../constants';
+import { COLOR, GRADIENT, SCREEN_WIDTH } from '../../../constants';
 import { H1, P as BaseP } from '../../Text';
 
 const HeroWrapper = styled.div`
-  padding: 0 2rem;
+  padding: 1rem 3rem;
 
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (min-width: ${SCREEN_WIDTH.Tablet}) {
+    padding: 5rem 12rem 3rem;
+    h1 {
+      margin-inline-start: 10rem;
+    }
+  }
+
+  @media only screen and (min-width: ${SCREEN_WIDTH.Desktop}) {
+    padding: 11rem 20rem 5rem;
+    h1 {
+      margin-inline-start: 0;
+      max-width: 20ch;
+    }
+  }
 `;
 
 const Circle = styled.div`
@@ -26,13 +41,34 @@ const Circle = styled.div`
   align-items: center;
 
   position: absolute;
-  top: 7rem;
+  top: 8rem;
   z-index: -1;
+
+  @media only screen and (min-width: ${SCREEN_WIDTH.Tablet}) {
+    top: 9rem;
+    left: 13rem;
+  }
+
+  @media only screen and (min-width: ${SCREEN_WIDTH.Desktop}) {
+    top: 12rem;
+    left: 25vw;
+    width: 40rem;
+    height: 40rem;
+  }
 `;
 
 const P = styled(BaseP)`
   margin-block-start: 7rem;
-  margin-block-end: 2rem;
+  margin-block-end: 3rem;
+
+  @media only screen and (min-width: ${SCREEN_WIDTH.Tablet}) {
+    margin-block-start: 9rem;
+  }
+
+  @media only screen and (min-width: ${SCREEN_WIDTH.Desktop}) {
+    margin-block-start: 14rem;
+    max-width: 60rem;
+  }
 `;
 
 function Hero() {

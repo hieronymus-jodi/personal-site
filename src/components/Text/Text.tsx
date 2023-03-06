@@ -14,6 +14,10 @@ export const H1 = styled.h1`
     font-size: inherit;
     font-style: italic;
   }
+
+  @media only screen and (min-width: ${SCREEN_WIDTH.Desktop}) {
+    font-size: 4.8rem;
+  }
 `;
 
 export const H2 = styled.h2`

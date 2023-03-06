@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { BsThreeDots } from 'react-icons/bs';
 import { COLOR, SCREEN_WIDTH } from '../../../constants';
 
-const FooterWrapper = styled.div`
+const FooterWrapper = styled.footer`
   background: ${COLOR.Dark_Purple};
   padding: 2rem 0 6rem;
   display: flex;

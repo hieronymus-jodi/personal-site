@@ -63,7 +63,7 @@ const DecorativeIcon = styled.div`
   min-height: 8rem;
   max-height: 8rem;
   min-width: 8rem;
-  max-height: 8rem;
+  max-width: 8rem;
   background: ${COLOR.Pastel_Purple};
   color: ${COLOR.White};
   border-radius: 100%;
@@ -73,7 +73,7 @@ const DecorativeIcon = styled.div`
     min-height: 12rem;
     max-height: 12rem;
     min-width: 12rem;
-    max-height: 12rem;
+    max-width: 12rem;
     margin-inline-end: 0;
     margin-block-end: 1.5rem;
   }
@@ -90,7 +90,9 @@ const ArrowWrapper = styled.div`
 `;
 
 function GetIcon(icon: string, windowSize: number) {
-  const DesktopWidthNum = Number(SCREEN_WIDTH.Desktop.substring(0, SCREEN_WIDTH.Desktop.length - 2)); // Removes 'px' at the end
+  const DesktopWidthNum = Number(
+    SCREEN_WIDTH.Desktop.substring(0, SCREEN_WIDTH.Desktop.length - 2)
+  ); // Removes 'px' at the end
   let baseSize = windowSize < DesktopWidthNum ? 1 : 1.5;
   switch (icon) {
     case 'magnifying-glass':
