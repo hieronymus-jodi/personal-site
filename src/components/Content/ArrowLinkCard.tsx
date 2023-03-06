@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { RxMagnifyingGlass } from 'react-icons/rx';
 import { FaArrowRight } from 'react-icons/fa';
 import { COLOR } from '../../constants';
-import { H2, P } from '../Text';
+import { H2, P as BaseP } from '../Text';
 
 type ArrowLinkCardProps = {
   /**
@@ -23,20 +23,22 @@ type ArrowLinkCardProps = {
   icon: string;
 };
 
-const LinksCardWrapper = styled.button`
+const LinksCardWrapper = styled.a`
   background: ${COLOR.White};
   border: none;
   border-radius: 15px;
   box-shadow: 10px 10px ${COLOR.Pastel_Blue};
+  text-decoration: none;
 `;
 
 const LinksCardContent = styled.div`
+  width: 30rem;
   display: flex;
   align-items: center;
 
-  padding: 2rem;
+  padding: 3rem 2rem;
   color: ${COLOR.Dark_Purple};
-  opacity: 0.8;
+  opacity: 0.7;
   transition: 0.4s;
 
   :hover {
@@ -61,6 +63,10 @@ const DecorativeIcon = styled.div`
 
 const TextWrapper = styled.div``;
 
+const P = styled(BaseP)`
+  margin-block-start: 2rem;
+`;
+
 function GetIcon(icon: string) {
   switch (icon) {
     case 'magnifying-glass':
@@ -75,7 +81,7 @@ function ArrowLinkCard({
   icon,
 }: ArrowLinkCardProps) {
   return (
-    <LinksCardWrapper>
+    <LinksCardWrapper href={href}>
       <LinksCardContent>
         <DecorativeIcon>{GetIcon(icon)}</DecorativeIcon>
         <TextWrapper>

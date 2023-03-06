@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { GiKiwiBird } from 'react-icons/gi';
 import { COLOR, GRADIENT } from '../../../constants';
-import { H1, P } from '../../Text';
+import { H1, P as BaseP } from '../../Text';
 
 const HeroWrapper = styled.div`
   padding: 0 2rem;
@@ -28,6 +28,11 @@ const Circle = styled.div`
   position: absolute;
   top: 7rem;
   z-index: -1;
+`;
+
+const P = styled(BaseP)`
+  margin-block-start: 7rem;
+  margin-block-end: 2rem;
 `;
 
 function Hero() {

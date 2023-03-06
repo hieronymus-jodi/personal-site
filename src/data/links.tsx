@@ -7,20 +7,21 @@ export const Links_Data = [
   },
   {
     heading: 'Blog',
-    description: "Learn about my experience and the projects I've worked on",
-    href: '/about',
+    description: "Read my notes about things I've learned in Computer Science",
+    href: '/blog',
     icon: 'magnifying-glass',
   },
   {
     heading: 'Resume',
-    description: "Learn about my experience and the projects I've worked on",
-    href: '/about',
+    description: 'See my resume, which is current as of March 2023',
+    href: '/about', // TODO: Link to resume
     icon: 'magnifying-glass',
   },
   {
     heading: 'GitHub',
-    description: "Learn about my experience and the projects I've worked on",
-    href: '/about',
+    description:
+      'Go to my GitHub profile, which includes code from notable projects',
+    href: 'https://github.com/hieronymus-jodi',
     icon: 'magnifying-glass',
   },
 ];

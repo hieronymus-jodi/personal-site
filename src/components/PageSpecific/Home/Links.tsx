@@ -5,12 +5,13 @@ import { ArrowLinkCard } from '../../Content';
 import { Links_Data } from '../../../data';
 
 const LinksWrapper = styled.div`
-  background: ${COLOR.Pastel_Yellow};
-  padding: 4rem 2rem 8rem;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1.8rem;
+  align-items: center;
 
-  * + * {
-    margin-block-start: 1.8rem;
-  }
+  background: ${COLOR.Pastel_Yellow};
+  padding: 4rem 0 8rem;
 `;
 
 function Links() {

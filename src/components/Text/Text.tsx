@@ -23,8 +23,6 @@ export const H2 = styled.h2`
 export const P = styled.p`
   font-size: 1.6rem;
   color: ${COLOR.Dark_Purple};
-  margin-block-start: 7rem;
-  margin-block-end: 2rem;
 
   span {
     font-size: inherit;

@@ -2,7 +2,7 @@ import React, { ReactNode, useState } from 'react';
 import styled, { css } from 'styled-components';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { TbLeaf } from 'react-icons/tb';
-import { COLOR, FONT, GRADIENT, SCREEN_WIDTH } from '../../constants';
+import { COLOR, FONT, GRADIENT, SCREEN_WIDTH } from '../../../constants';
 
 const Nav = styled.nav`
   position: relative;

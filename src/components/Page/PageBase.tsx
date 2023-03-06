@@ -3,7 +3,8 @@ import { Outlet } from 'react-router-dom';
 import '../../index.css';
 import { KeyboardOnlyLink } from '../A11y';
 
-import { NavBar } from '../NavBar';
+import { Footer } from './Footer';
+import { NavBar } from './NavBar';
 
 function PageBase() {
   return (
@@ -13,6 +14,7 @@ function PageBase() {
       <div id="main">
         <Outlet />
       </div>
+      <Footer />
     </div>
   );
 }
