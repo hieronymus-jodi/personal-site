@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { COLOR, FONT } from '../../constants';
+import { COLOR, FONT, SCREEN_WIDTH } from '../../constants';
 
 export const H1 = styled.h1`
   font-size: 3.6rem;
@@ -18,6 +18,10 @@ export const H1 = styled.h1`
 
 export const H2 = styled.h2`
   font-size: 2rem;
+
+  @media only screen and (min-width: ${SCREEN_WIDTH.Desktop}) {
+    font-size: 2.4rem;
+  }
 `;
 
 export const P = styled.p`

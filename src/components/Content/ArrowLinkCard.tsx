@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 import { RxMagnifyingGlass } from 'react-icons/rx';
 import { FaArrowRight } from 'react-icons/fa';
-import { COLOR } from '../../constants';
+import { HiOutlineCode, HiOutlineDocumentText } from 'react-icons/hi';
+import { RiQuillPenLine } from 'react-icons/ri';
+
+import { COLOR, SCREEN_WIDTH } from '../../constants';
 import { H2, P as BaseP } from '../Text';
+import { useRef, useState } from 'react';
 
 type ArrowLinkCardProps = {
   /**
@@ -44,6 +48,11 @@ const LinksCardContent = styled.div`
   :hover {
     opacity: 1;
   }
+
+  @media only screen and (min-width: ${SCREEN_WIDTH.Desktop}) {
+    flex-direction: column;
+    padding: 2rem 3rem 2.5rem;
+  }
 `;
 
 const DecorativeIcon = styled.div`
@@ -59,18 +68,47 @@ const DecorativeIcon = styled.div`
   color: ${COLOR.White};
   border-radius: 100%;
   margin-inline-end: 2rem;
-`;
 
-const TextWrapper = styled.div``;
+  @media only screen and (min-width: ${SCREEN_WIDTH.Desktop}) {
+    min-height: 12rem;
+    max-height: 12rem;
+    min-width: 12rem;
+    max-height: 12rem;
+    margin-inline-end: 0;
+    margin-block-end: 1.5rem;
+  }
+`;
 
 const P = styled(BaseP)`
   margin-block-start: 2rem;
 `;
 
-function GetIcon(icon: string) {
+const ArrowWrapper = styled.div`
+  @media only screen and (min-width: ${SCREEN_WIDTH.Desktop}) {
+    align-self: end;
+  }
+`;
+
+function GetIcon(icon: string, windowSize: React.MutableRefObject<number>) {
+  const baseSize = Number(windowSize) < Number(SCREEN_WIDTH.Desktop) ? 1 : 1.5;
   switch (icon) {
     case 'magnifying-glass':
-      return <RxMagnifyingGlass role="presentation" size="6rem" />;
+      return (
+        <RxMagnifyingGlass role="presentation" size={baseSize * 6 + 'rem'} />
+      );
+    case 'quill':
+      return (
+        <RiQuillPenLine role="presentation" size={baseSize * 5.5 + 'rem'} />
+      );
+    case 'document':
+      return (
+        <HiOutlineDocumentText
+          role="presentation"
+          size={baseSize * 5.5 + 'rem'}
+        />
+      );
+    case 'code':
+      return <HiOutlineCode role="presentation" size={baseSize * 5 + 'rem'} />;
   }
 }
 
@@ -80,17 +118,18 @@ function ArrowLinkCard({
   href,
   icon,
 }: ArrowLinkCardProps) {
+  const windowSize = useRef(window.innerWidth);
   return (
     <LinksCardWrapper href={href}>
       <LinksCardContent>
-        <DecorativeIcon>{GetIcon(icon)}</DecorativeIcon>
-        <TextWrapper>
+        <DecorativeIcon>{GetIcon(icon, windowSize)}</DecorativeIcon>
+        <div>
           <H2>{heading}</H2>
           <P>{description}</P>
-        </TextWrapper>
-        <div>
-          <FaArrowRight role="presentation" size="2.5rem" />
         </div>
+        <ArrowWrapper>
+          <FaArrowRight role="presentation" size="2.5rem" />
+        </ArrowWrapper>
       </LinksCardContent>
     </LinksCardWrapper>
   );

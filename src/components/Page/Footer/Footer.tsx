@@ -8,6 +8,10 @@ const FooterWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media only screen and (min-width: ${SCREEN_WIDTH.Desktop}) {
+    padding: 4rem 0 10rem;
+  }
 `;
 
 const LinkWrapper = styled.div`
