@@ -1,23 +1,24 @@
 import styled from 'styled-components';
 import { FaGraduationCap } from 'react-icons/fa';
-import { COLOR, SCREEN_WIDTH } from '../../../constants';
-import { H1, P } from '../../Text';
+import { COLOR, GRADIENT, SCREEN_WIDTH } from '../../../constants';
+import { H1 as BaseH1, P as BaseP } from '../../Text';
 
-const HeroWrapper = styled.div`
-  padding: 2rem 3.5rem;
+const ExperienceWrapper = styled.div`
+  padding: 1.5rem 3.5rem;
 
   display: flex;
   flex-flow: column;
   align-items: center;
   gap: 2rem;
+  background-color: ${COLOR.Dark_Purple};
 
   @media only screen and (min-width: ${SCREEN_WIDTH.Tablet}) {
-    padding: 3rem 5rem;
+    padding: 5rem 5rem 3rem;
     flex-flow: row;
   }
 
   @media only screen and (min-width: ${SCREEN_WIDTH.Desktop}) {
-    padding: 5rem 15rem;
+    padding: 11rem 15rem 5rem;
   }
 `;
 
@@ -27,8 +28,9 @@ const Circle = styled.div`
   max-width: 25rem;
   min-height: 25rem;
   max-height: 25rem;
-  background: ${COLOR.Dark_Purple};
-  color: ${COLOR.White};
+  background: ${GRADIENT.Sunset};
+  color: ${COLOR.Dark_Purple};
+  opacity: 0.6;
 
   display: flex;
   justify-content: center;
@@ -52,9 +54,17 @@ const TextWrapper = styled.div`
   }
 `;
 
-function Hero() {
+const H1 = styled(BaseH1)`
+  color: ${COLOR.White};
+`;
+
+const P = styled(BaseP)`
+  color: ${COLOR.White};
+`;
+
+function Experience() {
   return (
-    <HeroWrapper>
+    <ExperienceWrapper>
       <Circle>
         <FaGraduationCap role="presentation" size="20rem" />
       </Circle>
@@ -69,8 +79,8 @@ function Hero() {
           <b>responsive design</b> and <b>accessibility</b>. I'm very passionate about women in STEM.
         </P>
       </TextWrapper>
-    </HeroWrapper>
+    </ExperienceWrapper>
   );
 }
 
-export default Hero;
+export default Experience;
