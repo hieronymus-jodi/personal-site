@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import { Hero } from '../components/PageSpecific/About';
+import { Hero, Experience } from '../components/PageSpecific/About';
 
 function About() {
   return (
@@ -10,6 +10,7 @@ function About() {
         <title>Jodi Hieronymus | About</title>
       </Helmet>
       <Hero />
+      <Experience />
     </>
   );
 }
