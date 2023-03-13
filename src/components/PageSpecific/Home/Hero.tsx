@@ -11,6 +11,9 @@ const HeroWrapper = styled.div`
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+  h1 {
+    margin-block-start: 7rem;
+  }
 
   @media only screen and (min-width: ${SCREEN_WIDTH.Tablet}) {
     padding: 5rem 12rem 3rem;
@@ -84,7 +87,7 @@ function Hero() {
         <span>Hi!</span> I'm Jodi, a Computer Science undergraduate student
         graduating from the University of Nevada, Reno in May 2023. I am a{' '}
         <b>frontend software engineer</b> specializing in{' '}
-        <b>responsive design</b> and <b>accessibility</b>.
+        <b>responsive design</b> and <b>accessibility</b>. I'm very passionate about women in STEM.
       </P>
     </HeroWrapper>
   );

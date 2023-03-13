@@ -7,7 +7,6 @@ export const H1 = styled.h1`
   font-family: ${FONT.Script};
   text-align: center;
   font-weight: normal;
-  margin-block-start: 7rem;
 
   b {
     font-family: inherit;
@@ -30,6 +29,7 @@ export const H2 = styled.h2`
 
 export const P = styled.p`
   font-size: 1.6rem;
+  line-height: 1.9rem;
   color: ${COLOR.Dark_Purple};
 
   span {
