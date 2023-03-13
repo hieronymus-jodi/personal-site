@@ -87,7 +87,8 @@ function Hero() {
         <span>Hi!</span> I'm Jodi, a Computer Science undergraduate student
         graduating from the University of Nevada, Reno in May 2023. I am a{' '}
         <b>frontend software engineer</b> specializing in{' '}
-        <b>responsive design</b> and <b>accessibility</b>. I'm very passionate about women in STEM.
+        <b>responsive design</b> and <b>accessibility</b>. I'm very passionate
+        about women in STEM.
       </P>
     </HeroWrapper>
   );
